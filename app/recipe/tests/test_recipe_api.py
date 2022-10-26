@@ -51,8 +51,8 @@ class PrivateRecipeApiTest(TestCase):
         self.client.force_authenticate(self.user)
 
     def test_retreive_recipes(self):
-        recipe1 = create_recipe(user=self.user)
-        recipe2 = create_recipe(user=self.user)
+        create_recipe(user=self.user)
+        create_recipe(user=self.user)
 
         res = self.client.get(RECIPES_URL)
 
